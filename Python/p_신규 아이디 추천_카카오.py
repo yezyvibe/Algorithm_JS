@@ -1,7 +1,6 @@
 def solution(new_id):
     chk_letter = ['-', '_']
-    new_id = new_id.lower()  # 소문자 치환
-    dot_cnt = 0
+    new_id = new_id.lower()  # 소문자 변환
     res = ''
 
     for item in new_id:
@@ -11,14 +10,14 @@ def solution(new_id):
             res += item
         elif item in chk_letter:
             res += item
-        elif item == '.':
+        elif item == '.':  # '.'이 2번 이상인지 확인
             if len(res) != 0:
                 if res[-1] != '.':
                     res += '.'
             else:
                 res += '.'
 
-    # 처음끝 마침표 확인
+    # 처음과 끝 마침표 확인
     if len(res) != 0:
         if res[0] == '.':
             res = res[1:]

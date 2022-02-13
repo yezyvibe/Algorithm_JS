@@ -1,6 +1,6 @@
 function solution(numbers) {
   numbers.reduce((a, b) => a + b) === 0
-    ? (answer = 0)
+    ? (answer = "0")
     : (answer = numbers
         .map((number) => String(number))
         .sort((a, b) => b + a - (a + b))

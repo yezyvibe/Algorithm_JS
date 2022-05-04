@@ -23,7 +23,7 @@ function solution(N, road, K) {
       }
     });
   }
-  return visit.filter((item) => item <= K).length;
+  return dist.filter((item) => item <= K).length;
 }
 
 const N = 5;
